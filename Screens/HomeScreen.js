@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
 import React from 'react';
 import tailwind from 'twrnc';
+import NavOptions from '../components/NavOptions';
 const HomeScreen = () => {
   return (
     <View style={tailwind`bg-white h-full`}>
@@ -9,8 +10,9 @@ const HomeScreen = () => {
           source={{
             uri: 'https://download.logo.wine/logo/Uber/Uber-Logo.wine.png',
           }}
-          style={{ width: 100, height: 100, resizeMode: 'contain' }}
+          style={{ width: 100, height: 100, resizeMode:'contain'}}
         ></Image>
+        <NavOptions/>
       </View>
     </View>
   );
