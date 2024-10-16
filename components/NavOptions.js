@@ -9,8 +9,10 @@ import {
 import React from 'react';
 import tailwind from 'twrnc';
 import { Icon } from '@rneui/base';
+import { useNavigation } from '@react-navigation/native';
 
-const NavOptions = () => {
+const NavOptions = () => { 
+  const navigation = useNavigation()
   const data = [
     {
       id: '123',
@@ -31,7 +33,9 @@ const NavOptions = () => {
       horizontal
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
-        <TouchableOpacity style={tailwind`p-2 pl-6 pb-8  bg-gray-200 m-2 w-40`}>
+        <TouchableOpacity 
+        onPress={()=> navigation.navigate(item.screen)}
+        style={tailwind`p-2 pl-6 pb-8  bg-gray-200 m-2 w-40`}>
           <View>
             <Image
               source={{ uri: item.image }}

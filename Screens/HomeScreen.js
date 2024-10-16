@@ -5,7 +5,7 @@ import NavOptions from '../components/NavOptions';
 import MapScreen from './MapScreen';
 const HomeScreen = () => {
   return (
-    <View style={tailwind`bg-white`}>
+    <View style={tailwind`bg-white h-full`}>
       <View>
         <Image
           source={{
